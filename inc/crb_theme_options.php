@@ -6,7 +6,8 @@ use Carbon_Fields\Field;
 add_action( 'carbon_fields_register_fields', 'crb_attach_theme_options' );
 function crb_attach_theme_options(): void
 {
-    Container::make( 'theme_options', __( '| SEO |' ) )
+    Container::make( 'theme_options', __( 'SEO' ) )
+        ->set_icon('dashicons-tag')
         ->add_tab(__('Meta Locale'), [
             Field::make( 'text', 'crb_locale', 'Meta Locale')
             ->set_help_text('ex: fr_FR')

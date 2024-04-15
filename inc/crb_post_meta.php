@@ -9,9 +9,9 @@ add_action( 'carbon_fields_register_fields', 'crb_attach_post_meta' );
 
 function crb_attach_post_meta(): void
 {
-    $post_types = ['post', 'page'];
+    $post_types = ['post', 'page', 'custom_type'];
     foreach ($post_types as $post_type) {
-        Container::make( 'post_meta', __( '| SEO |' ) )
+        Container::make( 'post_meta', __( 'SEO' ) )
             ->where('post_type', '=', $post_type)
             ->add_tab(__('Meta Locale'), [
                 Field::make( 'text', 'crb_locale', 'Meta Locale')
