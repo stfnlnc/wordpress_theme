@@ -5,8 +5,6 @@ use Carbon_Fields\Field;
 
 add_action( 'carbon_fields_register_fields', 'crb_attach_post_meta' );
 
-
-
 function crb_attach_post_meta(): void
 {
     $post_types = ['post', 'page', 'custom_type'];
